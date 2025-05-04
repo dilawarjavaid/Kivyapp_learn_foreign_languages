@@ -23,6 +23,20 @@ class TranslationApp(App):
         self.title = 'Translation App'
         layout = BoxLayout(orientation='vertical', padding=20, spacing=20)
 
+        # Add quote display label
+        self.random_text = get_random_text()
+        self.text_label = Label(
+            text=self.random_text,
+            font_size=18,
+            size_hint_y=None,
+            height=100,
+            halign='center',
+            valign='middle'
+        )
+        self.text_label.bind(size=self.text_label.setter('text_size'))
+        layout.add_widget(self.text_label)
+
+
 
 
 
