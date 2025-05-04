@@ -18,4 +18,9 @@ def get_random_text():
         return "Default text as fallback."
 
 
+class TranslationApp(App):
+    def build(self):
+        pass
+
+
 
