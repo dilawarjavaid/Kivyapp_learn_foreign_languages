@@ -82,6 +82,24 @@ class TranslationApp(App):
         self.translation_output.bind(size=self.translation_output.setter('text_size'))
         layout.add_widget(self.translation_output)
 
+        return layout
+
+    # Update the quote displayed when refresh button is pressed.
+    def refresh_quote(self, instance):
+        self.random_text = get_random_text()
+        self.text_label.text = self.random_text
+
+    # Translate the current quote using the selected language and show it.
+    def translate_text(self, instance):
+        target_language = self.language_spinner.text
+        if target_language == 'Select language':
+            self.translation_output.text = 'Please select a language'
+        else:
+            translator = Translator(to_lang=target_language)
+            translated_text = translator.translate(self.random_text)
+            self.translation_output.text = translated_text
+
+
 
 
 
