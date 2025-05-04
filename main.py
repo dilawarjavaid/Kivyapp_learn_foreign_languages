@@ -70,6 +70,19 @@ class TranslationApp(App):
         button_layout.add_widget(self.translate_button)
         layout.add_widget(button_layout)
 
+        #Translation output
+        self.translation_output = Label(
+            text='',
+            font_size=18,
+            size_hint_y=None,
+            height=100,
+            halign='center',
+            valign='middle'
+        )
+        self.translation_output.bind(size=self.translation_output.setter('text_size'))
+        layout.add_widget(self.translation_output)
+
+
 
 
 
