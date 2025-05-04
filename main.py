@@ -36,6 +36,12 @@ class TranslationApp(App):
         self.text_label.bind(size=self.text_label.setter('text_size'))
         layout.add_widget(self.text_label)
 
+        #Add a refresh button
+        refresh_button = Button(text='Refresh Quote', size_hint=(1, None), height=60)
+        refresh_button.bind(on_press=self.refresh_quote)
+        layout.add_widget(refresh_button)
+
+
 
 
 
