@@ -99,6 +99,9 @@ class TranslationApp(App):
             translated_text = translator.translate(self.random_text)
             self.translation_output.text = translated_text
 
+if __name__ == '__main__':
+    TranslationApp().run()
+
 
 
 
