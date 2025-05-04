@@ -40,6 +40,8 @@ class TranslationApp(App):
         refresh_button = Button(text='Refresh Quote', size_hint=(1, None), height=60)
         refresh_button.bind(on_press=self.refresh_quote)
         layout.add_widget(refresh_button)
+        # Grid layout for input and spinner
+        grid_layout = GridLayout(cols=2, padding=10, spacing=20, size_hint_y=None, height=80)
 
 
 
