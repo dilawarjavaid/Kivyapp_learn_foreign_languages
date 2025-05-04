@@ -43,6 +43,17 @@ class TranslationApp(App):
         # Grid layout for input and spinner
         grid_layout = GridLayout(cols=2, padding=10, spacing=20, size_hint_y=None, height=80)
 
+        # User translation input
+        self.translation_input = TextInput(
+            hint_text='Type your translation here',
+            font_size=18,
+            multiline=True,
+            size_hint_x=0.7,
+            height=100
+        )
+        grid_layout.add_widget(self.translation_input)
+
+
 
 
 
