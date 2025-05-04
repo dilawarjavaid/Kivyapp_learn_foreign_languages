@@ -53,6 +53,17 @@ class TranslationApp(App):
         )
         grid_layout.add_widget(self.translation_input)
 
+        # Language selection spinner
+        self.language_spinner = Spinner(
+            text='Select language',
+            values=('es', 'fr', 'de', 'it', 'pt'),
+            size_hint=(0.3, None),
+            height=44
+        )
+        grid_layout.add_widget(self.language_spinner)
+        layout.add_widget(grid_layout)
+
+
 
 
 
