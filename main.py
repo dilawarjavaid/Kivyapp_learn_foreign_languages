@@ -63,6 +63,14 @@ class TranslationApp(App):
         grid_layout.add_widget(self.language_spinner)
         layout.add_widget(grid_layout)
 
+        # Translate button layout
+        button_layout = BoxLayout(size_hint_y=None, height=60)
+        self.translate_button = Button(text='Translate', size_hint=(1, 1))
+        self.translate_button.bind(on_press=self.translate_text)
+        button_layout.add_widget(self.translate_button)
+        layout.add_widget(button_layout)
+
+
 
 
 
