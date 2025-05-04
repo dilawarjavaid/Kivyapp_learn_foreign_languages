@@ -20,7 +20,11 @@ def get_random_text():
 
 class TranslationApp(App):
     def build(self):
-        pass
+        self.title = 'Translation App'
+        layout = BoxLayout(orientation='vertical', padding=20, spacing=20)
+
+
+
 
 
 
